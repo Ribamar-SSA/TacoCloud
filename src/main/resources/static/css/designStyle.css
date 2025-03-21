@@ -1,0 +1,101 @@
+body {
+    font-family: sans-serif;
+    background-color: #f8d7da;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    /* Ensure full viewport height */
+}
+
+
+
+
+h1 {
+    color: #d9534f;
+    /* Example color */
+    margin-top: 20px;
+}
+
+img {
+    max-width: 500px;
+    /* Adjust as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.container {
+    background-color: bisque;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    /* Adjust as needed */
+    max-width: 600px;
+    /* Set a maximum width */
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #333;
+    margin-top: 15px;
+}
+
+.ingredient-group {
+    margin-bottom: 10px;
+}
+
+.ingredient-group label {
+    /* Style the labels */
+    display: block;
+    /* Make labels stack on new lines */
+    margin-bottom: 5px;
+    /* Add margin between label and input */
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #d9534f;
+    /* Example color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c9302c;
+    /* Darker shade on hover */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    img {
+        max-width: 90%;
+    }
+}
+
+div.tacos_pedido{
+    margin-top: 15px;
+    font-family: sans-serif;
+
+}
