@@ -1,6 +1,8 @@
 package tacos.domain;
 
+import jakarta.persistence.UniqueConstraint;
 import lombok.Data;
+import org.hibernate.validator.constraints.UniqueElements;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Data

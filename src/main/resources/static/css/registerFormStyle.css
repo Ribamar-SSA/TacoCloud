@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
     background-color: #f8f8f8;
@@ -46,6 +53,15 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
+fieldset {
+    width: 100%;
+    padding: 8px;
+    /* margin-bottom: 5px; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 4px; */
+    box-sizing: border-box;
+}
+
 input[type="submit"] {
     background-color: #d9534f;
     color: white;
@@ -68,4 +84,17 @@ input[type="submit"]:hover {
     img {
         max-width: 90%;
     }
+}
+
+.error {
+    color: red;
+    /* Define a cor do texto como vermelho */
+    font-size: 14px;
+    /* Define o tamanho da fonte */
+    font-weight: bold;
+    /* Define a fonte como negrito */
+    margin-bottom: 10px;
+    /* Adiciona uma margem superior para espaçamento */
+    display: block;
+    /* Garante que a mensagem fique em uma nova linha */
 }

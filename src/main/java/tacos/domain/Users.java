@@ -1,9 +1,6 @@
 package tacos.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,6 +23,7 @@ public class Users implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(unique = true, nullable = false)
     private final String username;
     private final String password;
     private final String fullname;
