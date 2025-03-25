@@ -20,13 +20,16 @@ body {
     font-size: 18px;
     display: flex;
     align-items: center;
+    margin-left: 2em;
 }
 
 .lista-com-icones i {
     color: green;
     margin-right: 10px;
 }
-
+.subTitulo{
+    color: #c9302c;
+}
 
 input[type="text"],
 input[type="password"] {
