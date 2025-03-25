@@ -17,7 +17,7 @@
 
 
     <div class="tacos_pedido">
-        <h2 class="subTitulo">Your Order :</h2>
+        <h2 class="subTitulo">Your Orders :</h2>
 
         <ul th:each="taco : ${tacoOrder.tacos}" class="lista-com-icones">
             <li th:text="${taco.name}" > Item 1</li>
@@ -31,38 +31,66 @@
     <form method="post" th:action="@{/orders}" th:object="${tacoOrder}">
 
         <h3>Deliver my taco masterpieces to...</h3>
-        <label for="deliveryName">Name:</label>
-        <input type="text" id="deliveryName" th:field="*{deliveryName}"/><br/>
 
-        <label for="deliveryStreet">Street:</label>
-        <input type="text" id="deliveryStreet" th:field="*{deliveryStreet}"/><br/>
+        <fieldset>
+            <label for="deliveryName">Name:</label>
+            <input type="text" id="deliveryName" th:field="*{deliveryName}"/><br/>
 
-        <label for="deliveryCity">City:</label>
-        <input type="text" id="deliveryCity" th:field="*{deliveryCity}"/><br/>
+        </fieldset>
 
-        <label for="deliveryState">State:</label>
-        <input type="text" id="deliveryState" th:field="*{deliveryState}"/><br/>
 
-        <label for="deliveryZip">Zip code:</label>
-        <input type="text" id="deliveryZip" th:field="*{deliveryZip}"/><br/>
-        <span th:if="${#fields.hasErrors('deliveryZip')}" class="error"
-              th:errors="*{deliveryZip}"></span>
+        <fieldset>
+            <label for="deliveryStreet">Street:</label>
+            <input type="text" id="deliveryStreet" th:field="*{deliveryStreet}"/><br/>
 
-        <h3>Here is how I'll pay</h3>
-        <label for="ccNumber">Credit Card</label>
-        <input type="text" id="ccNumber" th:field="*{ccNumber}"/><br/>
-        <span th:if="${#fields.hasErrors('ccNumber')}" class="error"
-              th:errors="*{ccNumber}"></span>
+        </fieldset>
 
-        <label for="ccExpiration">Expiration:</label>
-        <input type="text" id="ccExpiration" th:field="*{ccExpiration}"/><br/>
-        <span th:if="${#fields.hasErrors('ccExpiration')}" class="error"
-              th:errors="*{ccExpiration}"></span>
+        <fieldset>
+            <label for="deliveryCity">City:</label>
+            <input type="text" id="deliveryCity" th:field="*{deliveryCity}"/><br/>
+        </fieldset>
 
-        <label for="ccCVV">CVV:</label>
-        <input type="text" id="ccCVV" th:field="*{ccCVV}"/><br/>
-        <span th:if="${#fields.hasErrors('ccCVV')}" class="error"
-              th:errors="*{ccCVV}"></span>
+
+        <fieldset>
+            <label for="deliveryState">State:</label>
+            <input type="text" id="deliveryState" th:field="*{deliveryState}"/><br/>
+        </fieldset>
+
+
+        <fieldset>
+            <label for="deliveryZip">Zip code:</label>
+            <input type="text" id="deliveryZip" th:field="*{deliveryZip}"/><br/>
+            <span th:if="${#fields.hasErrors('deliveryZip')}" class="error"
+                  th:errors="*{deliveryZip}"></span>
+
+        </fieldset>
+
+
+        <fieldset class="pay">
+            <h3>Here is how I'll pay</h3>
+            <label for="ccNumber">Credit Card</label>
+            <input type="text" id="ccNumber" th:field="*{ccNumber}"/><br/>
+            <span th:if="${#fields.hasErrors('ccNumber')}" class="error"
+                  th:errors="*{ccNumber}"></span>
+        </fieldset>
+
+
+        <fieldset class="pay">
+            <label for="ccExpiration">Expiration:</label>
+            <input type="text" id="ccExpiration" th:field="*{ccExpiration}"/><br/>
+            <span th:if="${#fields.hasErrors('ccExpiration')}" class="error"
+                  th:errors="*{ccExpiration}"></span>
+
+        </fieldset>
+
+        <fieldset class="pay">
+            <label for="ccCVV">CVV:</label>
+            <input type="text" id="ccCVV" th:field="*{ccCVV}"/><br/>
+            <span th:if="${#fields.hasErrors('ccCVV')}" class="error"
+                  th:errors="*{ccCVV}"></span>
+
+        </fieldset>
+
 
         <input type="submit" value="Submit Order">
 

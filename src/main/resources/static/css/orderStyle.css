@@ -1,3 +1,10 @@
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    border: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
 body {
     font-family: sans-serif;
     background-color: #f8f8f8;
@@ -7,6 +14,19 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+}
+
+
+fieldset {
+    margin: 20px 0; /* Adiciona margem vertical de 20 pixels */
+    padding: 15px; /* Adiciona preenchimento interno de 15 pixels */
+    border: 1px solid #ccc; /* Adiciona uma borda fina e discreta */
+    border-radius: 5px; /* Adiciona cantos arredondados */
+}
+
+legend {
+    font-weight: bold; /* Legenda em negrito */
+    padding: 5px; /* Adiciona preenchimento na legenda */
 }
 
 .lista-com-icones {
