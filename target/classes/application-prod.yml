@@ -1,0 +1,29 @@
+
+
+spring:
+
+#  profiles:
+#  configurado pelo código mandado no powershell envSPRING_PROFILES_ACTIVE=prod
+
+
+
+  security:
+   oauth2:
+    client:
+     registration:
+      google:
+        clientId: 474365664514-22e7k9iiu9biii5dc2fepeocuvm5rid5.apps.googleusercontent.com
+        clientSecret: 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
+
+
+taco:
+  orders:
+    pageSize: 10
+
+logging:
+  level:
+    tacos: WARN
+
+
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Taco Cloud - Order</title>
+    <link th:href="@{/css/orderStyle.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+
+
+<div class="container">
+    <h1>Order your taco creations</h1>
+
+
+
+    <div class="tacos_pedido">
+        <h2 class="subTitulo">Your Orders :</h2>
+
+        <ul th:each="taco : ${tacoOrder.tacos}" class="lista-com-icones">
+            <li th:text="${taco.name}" > Item 1</li>
+        </ul>
+
+        <a th:href="@{/design}" id="another">Design another taco</a>
+    </div>
+
+    <img th:src="@{/images/img.png}" alt="Taco Image">
+
+    <form method="post" th:action="@{/orders}" th:object="${tacoOrder}">
+
+        <h3>Deliver my taco masterpieces to...</h3>
+
+        <fieldset>
+            <label for="deliveryName">Name:</label>
+            <input type="text" id="deliveryName" th:field="*{deliveryName}"/><br/>
+
+        </fieldset>
+
+
+        <fieldset>
+            <label for="deliveryStreet">Street:</label>
+            <input type="text" id="deliveryStreet" th:field="*{deliveryStreet}"/><br/>
+
+        </fieldset>
+
+        <fieldset>
+            <label for="deliveryCity">City:</label>
+            <input type="text" id="deliveryCity" th:field="*{deliveryCity}"/><br/>
+        </fieldset>
+
+
+        <fieldset>
+            <label for="deliveryState">State:</label>
+            <input type="text" id="deliveryState" th:field="*{deliveryState}"/><br/>
+        </fieldset>
+
+
+        <fieldset>
+            <label for="deliveryZip">Zip code:</label>
+            <input type="text" id="deliveryZip" th:field="*{deliveryZip}"/><br/>
+            <span th:if="${#fields.hasErrors('deliveryZip')}" class="error"
+                  th:errors="*{deliveryZip}"></span>
+
+        </fieldset>
+
+
+        <fieldset class="pay">
+            <h3>Here is how I'll pay</h3>
+            <label for="ccNumber">Credit Card</label>
+            <input type="text" id="ccNumber" th:field="*{ccNumber}"/><br/>
+            <span th:if="${#fields.hasErrors('ccNumber')}" class="error"
+                  th:errors="*{ccNumber}"></span>
+        </fieldset>
+
+
+        <fieldset class="pay">
+            <label for="ccExpiration">Expiration:</label>
+            <input type="text" id="ccExpiration" th:field="*{ccExpiration}"/><br/>
+            <span th:if="${#fields.hasErrors('ccExpiration')}" class="error"
+                  th:errors="*{ccExpiration}"></span>
+
+        </fieldset>
+
+        <fieldset class="pay">
+            <label for="ccCVV">CVV:</label>
+            <input type="text" id="ccCVV" th:field="*{ccCVV}"/><br/>
+            <span th:if="${#fields.hasErrors('ccCVV')}" class="error"
+                  th:errors="*{ccCVV}"></span>
+
+        </fieldset>
+
+
+        <input type="submit" value="Submit Order">
+
+    </form>
+</div>
+
+</body>
+</html>

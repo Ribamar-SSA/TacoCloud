@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Taco Cloud - Register</title>
+    <link th:href="@{/css/registerFormStyle.css}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Register</h1>
+
+        <img th:src="@{/images/img.png}">
+
+
+        <form method="post" th:action="@{/register}" id="registerForm">
+
+            <fieldset>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required /><br />
+                <span th:if="${errorMessageUsername}" class="error" th:text="${errorMessageUsername}"></span>
+
+            </fieldset>
+
+
+            <fieldset>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required /><br />
+
+            </fieldset>
+
+
+            <fieldset>
+                <label for="confirm">Confirm password:</label>
+                <input type="password" name="confirm" id="confirm" required /><br />
+            </fieldset>
+
+
+
+            <fieldset>
+                <label for="fullname">Full name:</label>
+                <input type="text" name="fullname" id="fullname" required /><br />
+            </fieldset>
+
+
+
+            <fieldset>
+                <label for="street">Street:</label>
+                <input type="text" name="street" id="street" required /><br />
+            </fieldset>
+
+
+            <fieldset>
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city" required /><br />
+            </fieldset>
+
+
+
+            <fieldset>
+                <label for="state">State:</label>
+                <input type="text" name="state" id="state" required /><br />
+            </fieldset>
+
+
+
+            <fieldset>
+                <label for="zip">Zip:</label>
+                <input type="text" name="zip" id="zip" required /><br />
+            </fieldset>
+
+
+
+            <fieldset>
+                <label for="phone">Phone:</label>
+                <input type="text" name="phone" id="phone" required /><br />
+            </fieldset>
+
+
+
+            <fieldset>
+                <input type="submit" value="Register" />
+
+            </fieldset>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
